@@ -78,3 +78,9 @@ void ScalarConverter::convertToDouble(const char *str)
     }
     std::cout << "double: " << val << std::endl;
 }
+
+ScalarConverter &ScalarConverter::operator=(const ScalarConverter &other)
+{
+    (void)other;
+    return *this;
+}

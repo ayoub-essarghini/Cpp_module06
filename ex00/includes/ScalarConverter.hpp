@@ -20,4 +20,7 @@ public:
     static void convertToFloat(const char *str);
     static void convertToDouble(const char *str);
     static void convert(std::string str);
+
+    ScalarConverter &operator=(const ScalarConverter &other);
+
 };
