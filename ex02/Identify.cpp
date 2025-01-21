@@ -33,15 +33,18 @@ void identify(Base *p)
 void identify(Base &p)
 {
     try {
-        dynamic_cast<A&>(p);
+        A &a = dynamic_cast<A&>(p);
+        (void)a;
         std::cout << "Reference is of type A" << std::endl;
     } catch (std::exception &e){
         try {
-            dynamic_cast<B&>(p);
+            B &b = dynamic_cast<B&>(p);
+            (void)b;
             std::cout << "Reference is of type B" << std::endl;
         } catch (std::exception &e){
             try {
-                dynamic_cast<C&>(p);
+                C &c = dynamic_cast<C&>(p);
+                (void)c;
                 std::cout << "Reference is of type C" << std::endl;
             } catch (std::exception &e){
                 std::cout << "Reference is of an unknown type" << std::endl;
